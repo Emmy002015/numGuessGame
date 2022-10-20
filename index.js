@@ -23,3 +23,7 @@ function guessNumber() {
 }
 guessNumber()
 print("I am done")
+
+var num = 1
+var randonNum = Math.floor(Math.random()*num) + 1
+console.log(randonNum)
