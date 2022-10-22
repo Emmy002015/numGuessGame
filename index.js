@@ -1,25 +1,169 @@
-console.log("This is me testing nodejs")
-function guessNumber() {
-  var randomNum = Math.floor(Math.random() * 51);
+const numGuessGameStage9 = async (value, point) => {
+  console.log('Welcome to stage 9')
+  console.log(`your current point is ${point}`)
+  let userValue = await prompt(`choose between the range of 1 to 10`)
+  if (parseInt(userValue) == value) {
+    console.log('Winner!!!. Congratulation champ, you got to the last stage of the game')
+    point += 1
+    console.log(`your point is ${point}`)
+    console.log(`Your are a winner`)
+    console.log('Game Ended.....')
 
-  // output to the console for debugging
-  console.log(randomNum);
-
-  // declaring a variable
-  var guess;
-  guess = prompt("Please ener a number between 1 and 50")
-
-  // console.log("Your guess is: " + guess);
-
-  if (guess < randomNum) {
-    console.log("Your guess is lower than computer number")
-  } else if (guess > randomNum) {
-    console.log("Your guess is higher than computer number")
-  } else if (guess == randomNum) {
-    console.log("Your guess is correct. You win!. Cogratulations!!!")
   } else {
-    console.log("Your entry is invalid. Please try again")
+    console.log('You loss')
+    console.log('but you can still try again')
+    numGuessGameStage9((Math.round(Math.random() * 9)) + 1, point)
+  }
+
+}
+
+const numGuessGameStage8 = async (value, point) => {
+  console.log('Welcome to stage 8')
+  console.log(`your current point is ${point}`)
+  let userValue = await prompt(`choose between the range of 1 to 9`)
+  if (parseInt(userValue) == value) {
+    console.log('Winner!!!. Congratulation you are done with stage 8')
+    point += 1
+    console.log(`your point is now ${point}`)
+    numGuessGameStage9((Math.round(Math.random() * 9)) + 1, point)
+  } else {
+    console.log('You loss')
+    console.log('but you can still try again')
+    numGuessGameStage8((Math.round(Math.random() * 8)) + 1, point)
+  }
+
+}
+
+const numGuessGameStage7 = async (value, point) => {
+  console.log('Welcome to stage 7')
+  console.log(`your current point is ${point}`)
+  let userValue = await prompt(`choose between the range of 1 to 8`)
+  if (parseInt(userValue) == value) {
+    console.log('Winner!!!. Congratulation you are done with stage 7')
+    point += 1
+    console.log(`your point is now ${point}`)
+    numGuessGameStage8((Math.round(Math.random() * 8)) + 1, point)
+  } else {
+    console.log('You loss')
+    console.log('but you can still try again')
+    numGuessGameStage7((Math.round(Math.random() * 7)) + 1, point)
+  }
+
+}
+
+const numGuessGameStage6 = async (value, point) => {
+  console.log('Welcome to stage 6')
+  console.log(`your current point is ${point}`)
+  let userValue = await prompt(`choose between the range of 1 to 7`)
+  if (parseInt(userValue) == value) {
+    console.log('Winner!!!. Congratulation you are done with stage 6')
+    point += 1
+    console.log(`your point is now ${point}`)
+    numGuessGameStage7((Math.round(Math.random() * 7)) + 1, point)
+  } else {
+    console.log('You loss')
+    console.log('but you can still try again')
+    numGuessGameStage6((Math.round(Math.random() * 6)) + 1, point)
+  }
+
+}
+
+const numGuessGameStage5 = async (value, point) => {
+  console.log('Welcome to stage 5')
+  console.log(`your current point is ${point}`)
+  let userValue = await prompt(`choose between the range of 1 to 6`)
+  if (parseInt(userValue) == value) {
+    console.log('Winner!!!. Congratulation you are done with stage 5')
+    point += 1
+    console.log(`your point is now ${point}`)
+    numGuessGameStage6((Math.round(Math.random() * 6)) + 1, point)
+  } else {
+    console.log('You loss')
+    console.log('but you can still try again')
+    numGuessGameStage5((Math.round(Math.random() * 5)) + 1, point)
+  }
+
+}
+
+
+const numGuessGameStage4 = async (value, point) => {
+  console.log('Welcome to stage 4')
+  console.log(`your current point is ${point}`)
+  let userValue = await prompt(`choose between the range of 1 to 5`)
+  if (parseInt(userValue) == value) {
+    console.log('Winner!!!. Congratulation you are done with stage 4')
+    point += 1
+    console.log(`your point is now ${point}`)
+    numGuessGameStage5((Math.round(Math.random() * 5)) + 1, point)
+  } else {
+    console.log('You loss')
+    console.log('but you can still try again')
+    numGuessGameStage4((Math.round(Math.random() * 4)) + 1, point)
+  }
+
+}
+
+const numGuessGameStage3 = async (value, point) => {
+  console.log('Welcome to stage 3')
+  console.log(`your current point is ${point}`)
+  let userValue = await prompt(`choose between the range of 1 to 4`)
+  if (parseInt(userValue) == value) {
+    console.log('Winner!!!. Congratulation you are done with stage 3')
+    point += 1
+    console.log(`your point is now ${point}`)
+    numGuessGameStage4((Math.round(Math.random() * 4)) + 1, point)
+  } else {
+    console.log('You loss')
+    console.log('but you can still try again')
+    numGuessGameStage3((Math.round(Math.random() * 3)) + 1, point)
+  }
+
+}
+
+const numGuessGameStage2 = async (value, point) => {
+  console.log('Welcome to stage 2')
+  console.log(`your current point is ${point}`)
+  let userValue = await prompt(`choose between the range of 1 to 3`)
+  if (parseInt(userValue) == value) {
+    console.log('Winner!!!. Congratulation you are done with stage 2')
+    point += 1
+    console.log(`your point is now ${point}`)
+    numGuessGameStage3((Math.round(Math.random() * 3)) + 1, point)
+  } else {
+    console.log('You loss')
+    console.log('but you can still try again')
+    numGuessGameStage2((Math.round(Math.random() * 2)) + 1, point)
+  }
+
+}
+const numGuessGameStage1 = async (value, point) => {
+  console.log('Welcome to stage 1')
+  console.log(`your current point is ${point}`)
+  let userValue = await prompt(`choose between the range of 1 to 2`)
+  if (parseInt(userValue) == value) {
+    console.log('Winner!!!. Congratulation you are done with stage 1')
+    point += 1
+    console.log(`your point is now ${point}`)
+    numGuessGameStage2((Math.round(Math.random() * 2)) + 1, point)
+  } else {
+    console.log('You loss')
+    console.log('but you can still try again')
+    numGuessGameStage1((Math.round(Math.random() * 1)) + 1, point)
+  }
+
+}
+
+const numGuessGame = async () => {
+
+  let point = 0
+  let userInput = await prompt(`Enter username`)
+  let username = userInput
+  if (username.length != 0) {
+    console.log(`welcome ${username}`)
+    numGuessGameStage1((Math.round(Math.random() * 1)) + 1, point)
+  } else {
+    console.log('Enter your username')
+
   }
 }
-guessNumber()
-print("I am done")
+numGuessGame()
