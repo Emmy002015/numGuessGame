@@ -10,9 +10,7 @@ const numGuessGameStage9 = async (value, point) => {
     console.log('Game Ended.....')
 
   } else {
-    console.log('You loss')
-    console.log('but you can still try again')
-    numGuessGameStage9((Math.round(Math.random() * 9)) + 1, point)
+    console.log('You loss. Try again')
   }
 
 }
@@ -27,9 +25,7 @@ const numGuessGameStage8 = async (value, point) => {
     console.log(`your point is now ${point}`)
     numGuessGameStage9((Math.round(Math.random() * 9)) + 1, point)
   } else {
-    console.log('You loss')
-    console.log('but you can still try again')
-    numGuessGameStage8((Math.round(Math.random() * 8)) + 1, point)
+    console.log('You loss. Try again')
   }
 
 }
@@ -44,9 +40,7 @@ const numGuessGameStage7 = async (value, point) => {
     console.log(`your point is now ${point}`)
     numGuessGameStage8((Math.round(Math.random() * 8)) + 1, point)
   } else {
-    console.log('You loss')
-    console.log('but you can still try again')
-    numGuessGameStage7((Math.round(Math.random() * 7)) + 1, point)
+    console.log('You loss. Try again')
   }
 
 }
@@ -61,9 +55,7 @@ const numGuessGameStage6 = async (value, point) => {
     console.log(`your point is now ${point}`)
     numGuessGameStage7((Math.round(Math.random() * 7)) + 1, point)
   } else {
-    console.log('You loss')
-    console.log('but you can still try again')
-    numGuessGameStage6((Math.round(Math.random() * 6)) + 1, point)
+    console.log('You loss. Try again')
   }
 
 }
@@ -78,9 +70,7 @@ const numGuessGameStage5 = async (value, point) => {
     console.log(`your point is now ${point}`)
     numGuessGameStage6((Math.round(Math.random() * 6)) + 1, point)
   } else {
-    console.log('You loss')
-    console.log('but you can still try again')
-    numGuessGameStage5((Math.round(Math.random() * 5)) + 1, point)
+    console.log('You loss. Try again')
   }
 
 }
@@ -96,9 +86,7 @@ const numGuessGameStage4 = async (value, point) => {
     console.log(`your point is now ${point}`)
     numGuessGameStage5((Math.round(Math.random() * 5)) + 1, point)
   } else {
-    console.log('You loss')
-    console.log('but you can still try again')
-    numGuessGameStage4((Math.round(Math.random() * 4)) + 1, point)
+    console.log('You loss. Try again')
   }
 
 }
@@ -113,9 +101,7 @@ const numGuessGameStage3 = async (value, point) => {
     console.log(`your point is now ${point}`)
     numGuessGameStage4((Math.round(Math.random() * 4)) + 1, point)
   } else {
-    console.log('You loss')
-    console.log('but you can still try again')
-    numGuessGameStage3((Math.round(Math.random() * 3)) + 1, point)
+    console.log('You loss. Try again')
   }
 
 }
@@ -130,9 +116,7 @@ const numGuessGameStage2 = async (value, point) => {
     console.log(`your point is now ${point}`)
     numGuessGameStage3((Math.round(Math.random() * 3)) + 1, point)
   } else {
-    console.log('You loss')
-    console.log('but you can still try again')
-    numGuessGameStage2((Math.round(Math.random() * 2)) + 1, point)
+    console.log('You loss. Try again')
   }
 
 }
@@ -146,9 +130,7 @@ const numGuessGameStage1 = async (value, point) => {
     console.log(`your point is now ${point}`)
     numGuessGameStage2((Math.round(Math.random() * 2)) + 1, point)
   } else {
-    console.log('You loss')
-    console.log('but you can still try again')
-    numGuessGameStage1((Math.round(Math.random() * 1)) + 1, point)
+    console.log('You loss. Try again')
   }
 
 }
