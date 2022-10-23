@@ -141,7 +141,7 @@ const numGuessGame = async () => {
   let userInput = await prompt(`Enter username`)
   let username = userInput
   if (username.length != 0) {
-    console.log(`welcome ${username}`)
+    console.log(`welcome ${username} to EMJOE number guessing game. Enjoy!`)
     numGuessGameStage1((Math.round(Math.random() * 1)) + 1, point)
   } else {
     console.log('Enter your username')
